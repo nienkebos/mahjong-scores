@@ -1,14 +1,22 @@
-import React from 'react';
 
-class Header extends React.Component {
-    divStyle = {
-        border: 'solid 1px red',
-    };
+import React from "react";
+
+class Wind extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e) {
+        this.props.onWindChange(e.target.value)
+    }
+
     render() {
         return (
-            <div style={this.divStyle}>
+            <div className="wind-component">
                 <label>Choose your wind:
-                    <select>
+                    <select onChange={this.handleChange}>
                         <option value="East">East</option>
                         <option value="South">South</option>
                         <option value="West">West</option>
@@ -20,4 +28,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default Wind;

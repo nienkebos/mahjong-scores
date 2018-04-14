@@ -1,0 +1,10 @@
+.header {
+    display: flex;
+    justify-content: center;     
+}
+
+.player-component,
+.wind-component {
+    width: 200px;
+    padding: 10px 30px;
+}

@@ -1,20 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import database from './firebase';
 import img from './img/total.jpg';
 import './App.css';
-import  Header from './Header.js';
+import  Header from './Header/Header.js';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={img} className="App-logo" alt="" />
-          <h1 className="App-title">Mah-Jong Scores</h1>
+          <div>
+            <h1 className="App-title">Mah-Jong Scores</h1>
+            <div>Calculate your scores :)</div>
+          </div>
         </header>
-        <p className="App-intro">
-          Calculate your scores :)
-        </p>
-        <Header />
+        <div className="App-intro">
+          <Header />
+        </div>
       </div>
     );
   }
