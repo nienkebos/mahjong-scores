@@ -10,20 +10,15 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            wind: '',
             player: '',
         }
 
-        this.selectWind = this.selectWind.bind(this);
+        // Bind 'this' to the current component
         this.registerPlayer = this.registerPlayer.bind(this);
     }
 
-    selectWind(wind) {
-        this.setState({wind: wind})
-    }
-
     registerPlayer(player) {
-        this.setState({player: player})
+        this.setState({player})
     }
     
     render() {
@@ -35,7 +30,7 @@ class Header extends React.Component {
                     <RegisterPlayer onSubmit={this.registerPlayer} /> 
                 }
                 </div>
-                <Wind onWindChange={this.selectWind}/>
+                <Wind onWindChange={this.props.onWindChange}/>
             </div>
         );
     }
