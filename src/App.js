@@ -3,7 +3,7 @@ import firebase from './firebase';
 import img from './img/total.jpg';
 import './App.css';
 import  Header from './Header/Header.js';
-import  GameRack from './Game/GameRack.js';
+import  Game from './Game/Game.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -42,7 +42,7 @@ class App extends React.Component {
           <Header onWindChange={this.selectWind}/>
         </div>
         <div className="App-game">
-          <GameRack />
+          <Game />
         </div>
       </div>
     );

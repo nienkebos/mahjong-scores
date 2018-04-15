@@ -1,12 +1,13 @@
 import React from 'react';
 
-import './GameRack.css';
-
 class GameRack extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
     render() {
         return(
-            <div className="Game-rack">GameRack</div>
+            <div className="Game-rack" onClick={(e) => this.props.onClick()} >GameRack</div>
         )
     }
 }
